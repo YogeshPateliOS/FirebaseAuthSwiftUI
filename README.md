@@ -19,10 +19,6 @@ This repository is part of a series where we will cover the following topics:
 - Detailed explanations and implementation of various functionalities
 
 ## Screenshots
-Below are the images of the Login and Signup screens:
-
-### Login Screen
-![Login Screen](Screenshots/login.png)
-
-### Signup Screen
-![Signup Screen](Screenshots/signup1.png)
+| **Login Screen**           | **Signup Screen**         |
+|----------------------------|---------------------------|
+| ![Login Screen](Screenshots/login.png) | ![Signup Screen](Screenshots/signup1.png) |
