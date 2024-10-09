@@ -12,10 +12,3 @@ This repository is part of a series where we will cover the following topics:
 3. Part 3: Profile Management (In Progress ...)
 4. Part 4: Social Login Integration (Google, Facebook) (In Progress ...)
 5. Part 5: Forgot Password Functionality (In Progress ...)
-
-## Features
-- User-friendly Login and Signup screens
-- Integration with Firebase Authentication
-- MVVM design pattern
-- Responsive UI for various device sizes
-- Detailed explanations and implementation of various functionalities
