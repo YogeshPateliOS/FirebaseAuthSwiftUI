@@ -2,6 +2,8 @@
 
 Welcome to the **Firebase Auth SwiftUI Series** repository! This project demonstrates how to build a comprehensive mobile app using Firebase Authentication in SwiftUI, covering various functionalities including Login, Signup, Profile management, Social login, and Password reset.
 
+![APP UI](Screenshots/firebase.png)
+
 ## Series Overview
 This repository is part of a series where we will cover the following topics:
 
