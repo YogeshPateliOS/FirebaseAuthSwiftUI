@@ -13,6 +13,8 @@ struct CreateAccountView: View {
     @State private var fullName: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var router: Router
     
     var body: some View {
         VStack(spacing: 16) {
@@ -58,7 +60,17 @@ struct CreateAccountView: View {
             Spacer()
             
             Button {
-                
+                Task {
+                    await authViewModel.createUser(
+                        email: email,
+                        fullName: fullName,
+                        password: password
+                    )
+                    
+                    if !authViewModel.isError {
+                        router.navigateBack()
+                    }
+                }
             } label: {
                 Text("Create Account")
             }
@@ -79,4 +91,5 @@ struct CreateAccountView: View {
 
 #Preview {
     CreateAccountView()
+        .environmentObject(AuthViewModel())
 }

@@ -4,45 +4,46 @@ struct LoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var router: Router
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 16) {
-                    // logo
-                    logo
-                    // title
-                    titleView
-                    
-                    Spacer().frame(height: 12)
-                                        
-                    // textfields
-                    InputView(
-                        placeholder: "Email or Phone number",
-                        text: $email
-                    )
-                    
-                    InputView(
-                        placeholder: "Password",
-                        isSecureField: true,
-                        text: $password
-                    )
-                    // forgot button
-                    forgotButton
-                    
-                    // login button
-                    loginButton
-                    
-                    Spacer()
-                    
-                    // bottom view
-                    bottomView
-                }
+        ScrollView {
+            VStack(spacing: 16) {
+                // logo
+                logo
+                // title
+                titleView
+                
+                Spacer().frame(height: 12)
+                
+                // textfields
+                InputView(
+                    placeholder: "Email or Phone number",
+                    text: $email
+                )
+                
+                InputView(
+                    placeholder: "Password",
+                    isSecureField: true,
+                    text: $password
+                )
+                // forgot button
+                forgotButton
+                
+                // login button
+                loginButton
+                
+                Spacer()
+                
+                // bottom view
+                bottomView
             }
-            .ignoresSafeArea()
-            .padding(.horizontal)
-            .padding(.vertical, 8)
         }
+        .ignoresSafeArea()
+        .padding(.horizontal)
+        .padding(.vertical, 8)
+        .alert("Something went wrong", isPresented: $authViewModel.isError) {}
     }
     
     private var logo: some View {
@@ -60,22 +61,22 @@ struct LoginView: View {
     private var forgotButton: some View {
         HStack {
             Spacer()
-            
             Button {
-                
+                router.navigate(to: .forgotPassword)
             } label: {
                 Text("Forgot Password?")
                     .foregroundStyle(.gray)
                     .font(.subheadline)
                     .fontWeight(.medium)
             }
-            
         }
     }
     
     private var loginButton: some View {
         Button {
-            
+            Task {
+                await authViewModel.login(email: email, password: password)
+            }
         } label: {
             Text("Login")
         }
@@ -139,8 +140,8 @@ struct LoginView: View {
     }
     
     private var footerView: some View {
-        NavigationLink {
-            CreateAccountView()
+        Button {
+            router.navigate(to: .createAccount)
         } label: {
             HStack {
                 Text("Don't have an account?")
@@ -155,4 +156,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environmentObject(AuthViewModel())
 }
