@@ -19,8 +19,3 @@ This repository is part of a series where we will cover the following topics:
 - MVVM design pattern
 - Responsive UI for various device sizes
 - Detailed explanations and implementation of various functionalities
-
-## Screenshots
-| **Login Screen**           | **Signup Screen**         |
-|----------------------------|---------------------------|
-| ![Login Screen](Screenshots/login.png) | ![Signup Screen](Screenshots/signup1.png) |
