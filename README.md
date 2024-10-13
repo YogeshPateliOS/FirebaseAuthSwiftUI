@@ -9,6 +9,6 @@ This repository is part of a series where we will cover the following topics:
 
 1. **[Part 1: Login and Signup UI](https://youtu.be/USivbJZ-FVM?si=bTcZVPryYXxhTVdT)**
 2. **[Part 2: User Authentication and Session Management](https://youtu.be/BRbGVPSjP7I)**
-3. Part 3: Profile Management (In Progress ...)
-4. Part 4: Social Login Integration (Google, Facebook) (In Progress ...)
-5. Part 5: Forgot Password Functionality (In Progress ...)
+3. **[Part 3: Profile Management](https://youtu.be/4w9NKhkSjPk)**
+4. Part 4: Forgot Password Functionality (In Progress ...)
+5. Part 5: Routing & Navigation in SwiftUI (In Progress ...)
