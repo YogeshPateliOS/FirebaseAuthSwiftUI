@@ -11,4 +11,4 @@ This repository is part of a series where we will cover the following topics:
 2. **[Part 2: User Authentication and Session Management](https://youtu.be/BRbGVPSjP7I)**
 3. **[Part 3: Profile Management](https://youtu.be/4w9NKhkSjPk)**
 4. **[Part 4: Reset Password via Email](https://youtu.be/UzVAt9pBRSw)**
-5. Part 5: Routing & Navigation in SwiftUI (In Progress ...)
+5. **[Part 5: Routing & Navigation in SwiftUI](https://youtu.be/4Vg_LsVc_Kk)**
